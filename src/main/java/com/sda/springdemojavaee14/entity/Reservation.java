@@ -38,4 +38,19 @@ public class Reservation {
     int numberOfPeople;
 
     String address;
+
+    // property - how it works in Java
+    // property: firstname
+    // getter: getFirstName
+    // setter: setFirstName
+    // backing field: name
+//    private String name;
+//
+//    public String getFirstname() {
+//        return name;
+//    }
+//
+//    public void setFirstname(String name) {
+//        this.name = name;
+//    }
 }
