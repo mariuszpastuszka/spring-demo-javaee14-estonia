@@ -17,5 +17,13 @@ public class Main {
         System.out.println("is this the same person? - " + me.equals(anotherMe));
 
         System.out.println("are equals: " + me.equals("haha"));
+
+        Person meAgain = new Person("mariusz", "Pastuszka", 39);
+        // builder is better than all args constructor - because You can see more:)
+        Person meAgainWithBuilder = Person.builder()
+                .age(39)
+                .surname("Pastuszka")
+                .name("Mariusz")
+                .build();
     }
 }
