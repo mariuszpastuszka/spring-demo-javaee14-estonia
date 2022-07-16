@@ -33,10 +33,32 @@ public class OptionalExerciseMain {
         // lambda is for shorter way of providing interface implementations
         // lambda is just content of missing interface method
         // we don't need argument type in lambda because we know which method we implement
+        // lambda is for sending behaviour
+        // we can use lambda only with interfaces with just one abstract method (one to implement)
         // -> (arrow) is separator of arguments and method body
         maybeNick.ifPresent(nick -> System.out.println("Nick is: " + nick));
         maybeNick.ifPresent((String nick) -> System.out.println("Nick is: " + nick));
+
+        System.out.println("Now more exercises with lambda");
+        Optional<String> hasContent = Optional.of("stupid content");
+        Optional<String> noContent = Optional.empty();
+
+        System.out.println("Using ifPresentOrElse method from Optional class with lambdas");
+        // first argument we implement accept method from Consumer
+        // second argument we implement run method from Runnable
+        hasContent.ifPresentOrElse(s -> System.out.println("Value is present: " + s),
+                () -> System.out.println("no content"));
+
+        noContent.ifPresentOrElse(s -> {
+                    System.out.println("has content");
+                    System.out.println("content: " + s);
+                },
+                () -> {
+                    System.out.println("no content");
+                    System.out.println("just null");
+                });
     }
+
     // In Kotlin Language: String (never null) and String?
     public static String personNick() {
         return null;
