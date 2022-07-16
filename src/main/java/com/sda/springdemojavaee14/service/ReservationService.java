@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -25,6 +26,11 @@ public class ReservationService {
     }
 
     public Reservation findReservationById(Long reservationId) {
-        return null;
+        log.info("finding reservation with id: [{}]", reservationId);
+//        Optional<Reservation> reservationFromDb = reservationRepository.findById(reservationId);
+        // var is just for less typing and replaces all type name - the same as above line
+        // if You use var provide good name - always try to provide good name
+        var reservationFromDb = reservationRepository.findById(reservationId);
+        return reservationFromDb.orElse(null);
     }
 }
