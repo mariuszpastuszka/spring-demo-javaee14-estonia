@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>My page</title>
+</head>
+<body>
+  <h1>Welcome to my page</h1>
+  <p>This is my first spring page</p>
+<!--  the value of th:text replaces InnerHtml with new value-->
+  <p>Welcome <span th:text="Kristaps">Peeter</span></p>
+  <p>Welcome <span th:text="${name}">Dynamic name</span></p>
+</body>
+</html>
