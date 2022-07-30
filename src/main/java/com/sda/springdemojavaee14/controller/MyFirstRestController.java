@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 // @RestController creates new Spring bean based on the class
 // bean = component = managed object (object created by Spring for us)
-// TODO: install postman :P
 @RestController
 public class MyFirstRestController {
 

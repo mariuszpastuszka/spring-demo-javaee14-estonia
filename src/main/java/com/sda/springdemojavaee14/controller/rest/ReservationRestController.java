@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -57,14 +56,8 @@ public class ReservationRestController {
             return ResponseEntity.ok(responseBody);
         } else {
             // https://danielmiessler.com/images/url-urn-uri-structure-2022.png
-            String path = "/api/reservations/" + reservationId;
-            try {
-                // TODO: fix server url
-                URI uri = new URI("/api/reservations/" + reservationId);
-                path = uri.getPath();
-            } catch (URISyntaxException e) {
-                log.warn("problems with creating URI", e);
-            }
+            String path = ServletUriComponentsBuilder.fromCurrentRequest().toUriString();
+
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
                     GenericError.builder()
                             .responseCode(404)
