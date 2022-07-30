@@ -23,7 +23,7 @@
                 <td><span th:text="${one.surname}">Pastuszka</span></td>
                 <td><a href="#" th:href="@{'/web/reservations/' + ${one.id}}">Details</a></td>
                 <td><a href="#">Edit me</a></td>
-                <td><a href="#">Delete me</a></td>
+                <td><a href="#" th:href="@{'/web/reservations/delete/' + ${one.id}}">Delete me</a></td>
             </tr>
         </tbody>
     </table>
