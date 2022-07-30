@@ -35,6 +35,6 @@ public class ReservationWebController {
         var reservationsFromDB = reservationService.findAllReservations();
         data.addAttribute(RESERVATIONS_KEY, reservationsFromDB);
 
-        return "all-reservations";
+        return "reservations/all-reservations";
     }
 }
