@@ -15,5 +15,8 @@
   <p>Email: <span th:text="${reservation.email}">p.najadi@gmail.com</span></p>
   <p>NumberOfPeople: <span th:text="${reservation.numberOfPeople}">10</span></p>
   <p>Address: <span th:text="${reservation.address}">Estonia,Tallinn</span></p>
+
+  <br>
+  <a href="#" th:href="@{/web/reservations}">Back to all reservations</a>
 </body>
 </html>
