@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Reservation</title>
+    <meta charset="UTF-8">
+    <title>Reservation</title>
 </head>
 <body>
-<!--homework-->
   <p>Id: <span th:text="${reservation.id}">100</span></p>
-  <p>TableNumber: <span th:text="${reservation.phoneNumber}">111111</span></p>
+  <p>TableNumber: <span th:text="${reservation.tableNumber}">111111</span></p>
+  <p>StartBookingTime: <span th:text="${reservation.startBookingTime}">12/02/2022</span></p>
+  <p>EndBookingTime: <span th:text="${reservation.endBookingTime}">12/02/2022</span></p>
+  <p>Surname: <span th:text="${reservation.surname}">Najafi</span></p>
+  <p>PhoneNumber: <span th:text="${reservation.phoneNumber}">37288888</span></p>
+  <p>Email: <span th:text="${reservation.email}">p.najadi@gmail.com</span></p>
+  <p>NumberOfPeople: <span th:text="${reservation.numberOfPeople}">10</span></p>
+  <p>Address: <span th:text="${reservation.address}">Estonia,Tallinn</span></p>
 </body>
 </html>
